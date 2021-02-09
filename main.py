@@ -28,12 +28,16 @@ def factors_of(n):
     if not(isinstance(n, int)):
         raise TypeError
 
+    remainder = n
     factors = []
 
     if n > 1:
         if n % 2 == 0:
             factors.append(2)
-            n /= 2
+            remainder /= 2
+
+    if remainder > 1:
+        factors.append(remainder)
 
     return factors
 

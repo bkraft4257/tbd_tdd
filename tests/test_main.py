@@ -1,7 +1,7 @@
 from main import factors_of
 
 
-def test_factors_of_value_equals_1():
+def test_factors_of_1():
 
     # Given: integer
     value = 1

@@ -36,14 +36,12 @@ def test_factors_of_integers(test_input, expected_result):
                           ('2', )
                           ],
                          ids=['factor_of_float', 'factor_of_string'])
-def test_factors_of_integers_with_error(test_input, expected_result):
+def test_factors_of_integers_with_error(test_input):
 
-    # Given: integer test_input
+    # Given: an input other than type
 
-    # When: factoring integer
-    result = factors_of(test_input)
+    # When: calling factors_of return TypeError
+    # Then return TypeError
 
-    # Then return list factors
-    assert result == expected_result
-
-
+    with pytest.raises(TypeError):
+        factors_of(test_input)

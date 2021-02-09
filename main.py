@@ -20,10 +20,13 @@ def factors_of(n):
     """
     Factor an integer into a list where the product of the list is equal to the original number.
 
-    :param value: Integer to factor
+    :param n: Integer to factor
     :return: List of integers whose product is equal to value.
     """
     # Use a breakpoint in the code line below to debug your script.
+
+    if not(isinstance(n, int)):
+        raise TypeError
 
     factors = []
 

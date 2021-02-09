@@ -30,14 +30,13 @@ def factors_of(n):
 
     remainder = n
     factors = []
+    divisor = 2
 
-    if n > 1:
-        if n % 2 == 0:
-            factors.append(2)
-            remainder /= 2
-
-    if remainder > 1:
-        factors.append(remainder)
+    while remainder > 1:
+        while remainder % divisor == 0:
+            factors.append(divisor)
+            remainder /= divisor
+        divisor += 1
 
     return factors
 

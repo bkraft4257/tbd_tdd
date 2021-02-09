@@ -16,7 +16,7 @@
 #
 #
 
-def factors_of(value):
+def factors_of(n):
     """
     Factor an integer into a list where the product of the list is equal to the original number.
 
@@ -24,7 +24,15 @@ def factors_of(value):
     :return: List of integers whose product is equal to value.
     """
     # Use a breakpoint in the code line below to debug your script.
-    return []  # Press ⌘F8 to toggle the breakpoint.
+
+    factors = []
+
+    if n > 1:
+        if n % 2 == 0:
+            factors.append(2)
+            n /= 2
+
+    return factors
 
 
 if __name__ == '__main__':

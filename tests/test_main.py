@@ -18,6 +18,17 @@ def test_factors_of_integers_with_error(test_input):
         factors_of(test_input)
 
 
+def test_factors_of_1():
+    # Given: integer test_input
+    test_input = 1
+
+    # When: factoring integer
+    result = factors_of(test_input)
+
+    # Then return list factors
+    assert result == []
+
+
 factor_test_values = [([2]),
                       ([3]),
                       ([2, 2]),
